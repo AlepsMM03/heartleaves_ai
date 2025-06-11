@@ -50,18 +50,19 @@ def main():
         with col1:
             troponin = st.number_input(
                 "Nivel de Troponina (ng/mL)", min_value=0.0, max_value=100.0,
-                 step=0.01, help="Valor normal típico: <0.04 ng/mL"
+                value=0.01, step=0.01, help="Valor normal típico: <0.04 ng/mL"
             )
         with col2:
             ck_mb = st.number_input(
                 "Nivel de CK-MB (U/L)", min_value=0.0, max_value=1000.0,
-                step=0.1, help="Valor normal típico: <5 U/L"
+                value=5.0, step=0.1, help="Valor normal típico: <5 U/L"
             )
         with col3:
             age = st.number_input(
                 "Edad del Paciente", min_value=18, max_value=120,
-                 help="Edad en años completos"
+                value=50, help="Edad en años completos"
             )
+
 
     # Botón de predicción
     st.markdown("---")
